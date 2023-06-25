@@ -33,4 +33,4 @@ with pkgs; [
 	
 	winetricks
 	bottles
-];
+]
