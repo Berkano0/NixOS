@@ -25,7 +25,17 @@ with pkgs; [
 	ffmpeg
 	wget
 	file
+	rofi-wayland
+	swww
+	grim
+    	slurp
+    	wl-clipboard
 	
+	(pkgs.waybar.overrideAttrs (oldAttrs: {
+        mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
+      	})
+    	)	
+
 	(wineWowPackages.full.override {
      	wineRelease = "staging";
      	mingwSupport = true;
