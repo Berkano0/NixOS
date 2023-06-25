@@ -1,9 +1,14 @@
 { config, pkgs, system, ... }:
+let 
 
+	mypkgs = import ./pkgs.nix {inherit pkgs;};
+
+in
 {
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      
     ];
 
   boot.loader.systemd-boot.enable = true;
@@ -71,38 +76,39 @@ programs.zsh.enable = true;
     description = "berkano";
     shell = pkgs.zsh;
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-	firefox
-	kate
-	discord
-	tdesktop
-	neofetch
-	easyeffects
-	xclip
-	git
-	alacritty
-	ranger
-	rofi
-	fzf
-	btop
-	exa
-	bat
-	fd
-	zoxide
-	ripgrep
-	du-dust
-	lazygit
-	ffmpeg
-	wget
-	file
-	(wineWowPackages.full.override {
-     wineRelease = "staging";
-     mingwSupport = true;
-   })
-	winetricks
-	bottles
+    packages = mypkgs;
+   # packages = with pkgs; [
+   #     firefox
+   #     kate
+   #     discord
+   #     tdesktop
+   #     neofetch
+   #     easyeffects
+   #     xclip
+   #     git
+   #     alacritty
+   #     ranger
+   #     rofi
+   #     fzf
+   #     btop
+   #     exa
+   #     bat
+   #     fd
+   #     zoxide
+   #     ripgrep
+   #     du-dust
+   #     lazygit
+   #     ffmpeg
+   #     wget
+   #     file
+   #     (wineWowPackages.full.override {
+   #  wineRelease = "staging";
+   #  mingwSupport = true;
+   #})
+   #     winetricks
+   #     bottles
 
-    ];
+   # ];
   };
 
   nixpkgs.config.allowUnfree = true;
