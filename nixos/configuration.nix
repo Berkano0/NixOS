@@ -66,49 +66,27 @@ in
   };
 
 
-hardware = { nvidia.package = config.boot.kernelPackages.nvidiaPackages.stable; opengl = {enable = true; driSupport = true; driSupport32Bit = true; }; };
+hardware = { 
+	nvidia.package = config.boot.kernelPackages.nvidiaPackages.stable;
+	modesetting.enable = true;
+	opengl = {
+		enable = true;
+		driSupport = true;
+		driSupport32Bit = true;
+    		};
+};
 
 
 programs.noisetorch.enable = true;
 programs.zsh.enable = true;
+programs.hyprland.enable = true;
+programs.hyprland.nvidiaPatches = true;
   users.users.berkano = {
     isNormalUser = true;
     description = "berkano";
     shell = pkgs.zsh;
     extraGroups = [ "networkmanager" "wheel" ];
     packages = mypkgs;
-   # packages = with pkgs; [
-   #     firefox
-   #     kate
-   #     discord
-   #     tdesktop
-   #     neofetch
-   #     easyeffects
-   #     xclip
-   #     git
-   #     alacritty
-   #     ranger
-   #     rofi
-   #     fzf
-   #     btop
-   #     exa
-   #     bat
-   #     fd
-   #     zoxide
-   #     ripgrep
-   #     du-dust
-   #     lazygit
-   #     ffmpeg
-   #     wget
-   #     file
-   #     (wineWowPackages.full.override {
-   #  wineRelease = "staging";
-   #  mingwSupport = true;
-   #})
-   #     winetricks
-   #     bottles
-
-   # ];
   };
 
   nixpkgs.config.allowUnfree = true;
