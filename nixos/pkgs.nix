@@ -32,6 +32,7 @@ with pkgs; [
 	grim
     	slurp
     	wl-clipboard
+	picom-jonaburg
 	
 	(pkgs.waybar.overrideAttrs (oldAttrs: {
         mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
