@@ -41,6 +41,7 @@ with pkgs; [
      	mingwSupport = true;
    	})
 	
+	sxhkd
 	winetricks
 	bottles
 ]
