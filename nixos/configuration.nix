@@ -40,7 +40,12 @@ in
   services.xserver.displayManager.sddm.enable = true;
   services.xserver.desktopManager.plasma5.enable = true;
 
-services.windowManager.awesome = {
+  
+
+  services.xserver = {
+  	videoDrivers = ["nvidia"];
+
+windowManager.awesome = {
       enable = true;
       luaModules = with pkgs.luaPackages; [
         luarocks # is the package manager for Lua modules
@@ -48,11 +53,6 @@ services.windowManager.awesome = {
       ];
 
     };
-  
-
-  services.xserver = {
-  	videoDrivers = ["nvidia"];
-
     layout = "us,ru";
     xkbVariant = "";
     xkbOptions = "grp:win_space_toggle";
