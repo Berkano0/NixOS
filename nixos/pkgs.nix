@@ -15,6 +15,7 @@ with pkgs; [
 	rofi
 	fzf
 	btop
+	xrandr
 	exa
 	bat
 	fd

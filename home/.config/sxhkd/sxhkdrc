@@ -1,2 +1,5 @@
 KP_Subtract
 	amixer sset Capture toggle
+Menu
+	alacritty
+
