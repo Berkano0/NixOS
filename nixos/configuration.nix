@@ -40,7 +40,14 @@ in
   services.xserver.displayManager.sddm.enable = true;
   services.xserver.desktopManager.plasma5.enable = true;
 
+windowManager.awesome = {
+      enable = true;
+      luaModules = with pkgs.luaPackages; [
+        luarocks # is the package manager for Lua modules
+        luadbi-mysql # Database abstraction layer
+      ];
 
+    };
   
 
   services.xserver = {
