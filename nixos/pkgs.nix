@@ -41,6 +41,7 @@ with pkgs; [
      	mingwSupport = true;
    	})
 	
+	stow
 	sxhkd
 	winetricks
 	bottles

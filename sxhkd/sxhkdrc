@@ -1,0 +1,2 @@
+KP_Subtract
+	amixer sset Capture toggle
