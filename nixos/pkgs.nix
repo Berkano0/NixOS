@@ -11,6 +11,7 @@ with pkgs; [
 	xclip
 	git
 	alacritty
+	piper
 	ranger
 	rofi
 	fzf
