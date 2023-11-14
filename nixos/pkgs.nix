@@ -18,7 +18,7 @@ with pkgs; [
 	btop
 	xorg.xrandr
 	arandr
-	exa
+	eza
 	bat
 	fd
 	zoxide
