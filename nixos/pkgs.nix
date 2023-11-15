@@ -22,6 +22,7 @@ with pkgs; [
 	bat
 	fd
 	zoxide
+	onlyoffice-bin
 	ripgrep
 	du-dust
 	lazygit
