@@ -36,6 +36,15 @@ in
     LC_TIME = "uk_UA.UTF-8";
   };
 
+	home-manager = {
+      	extraSpecialArgs = {
+        	inherit inputs;
+      	};
+      	users = {
+        	"berkano" = import ./../home/home.nix;
+      	};
+    	};
+
   services.xserver.enable = true;
 
   services.xserver.displayManager.sddm.enable = true;
