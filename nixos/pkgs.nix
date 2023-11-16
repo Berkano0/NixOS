@@ -9,6 +9,7 @@ with pkgs; [
 	neofetch
 	easyeffects
 	xclip
+	steam
 	git
 	alacritty
 	piper
