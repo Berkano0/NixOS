@@ -1,7 +1,7 @@
 {pkgs, ...}:
 
 {
-	home.configFile."sxhkd/sxhkdrc".text = ''
+	home.file.".config/sxhkd/sxhkdrc".text = ''
 	
 		Menu 
 			rofi -show drun 
