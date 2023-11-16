@@ -5,7 +5,7 @@
   ...
 }: {
 
-  imports = [./lf.nix ./rofi];
+  imports = [./lf.nix ./rofi ./sxhkd.nix];
   home = {
     username = "berkano";
     homeDirectory = lib.mkDefault "/home/berkano";
