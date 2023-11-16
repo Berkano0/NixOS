@@ -25,6 +25,7 @@ with pkgs; [
 	zoxide
 	onlyoffice-bin
 	ripgrep
+	vesktop
 	du-dust
 	lazygit
 	ffmpeg
