@@ -5,7 +5,7 @@
   ...
 }: {
 
-  imports = [./lf.nix];
+  imports = [./lf.nix ./rofi];
   home = {
     username = "berkano";
     homeDirectory = lib.mkDefault "/home/berkano";
