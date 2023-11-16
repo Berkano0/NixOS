@@ -30,6 +30,7 @@ with pkgs; [
 	wget
 	file
 	rofi-wayland
+	obsidian
 	swww
 	grim
     	slurp
