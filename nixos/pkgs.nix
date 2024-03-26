@@ -35,10 +35,11 @@ with pkgs; [
 	obsidian
 	swww
 	grim
-    	slurp
-    	wl-clipboard
+   	slurp
+    wl-clipboard
 	picom-jonaburg
-	
+	alejandra
+	nil
 	(pkgs.waybar.overrideAttrs (oldAttrs: {
         mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
       	})
