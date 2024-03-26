@@ -37,7 +37,6 @@ with pkgs; [
 	grim
    	slurp
     wl-clipboard
-	picom-jonaburg
 	alejandra
 	nil
 	(pkgs.waybar.overrideAttrs (oldAttrs: {
