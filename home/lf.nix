@@ -40,7 +40,7 @@
       y = "copy";
       "`" = "mark-load";
       "\\'" = "mark-load";
-      "<enter>" = "open";
+      "<enter>" = ''$$EDITOR "$f"'';
       a = "rename";
       r = "reload";
       C = "clear";
