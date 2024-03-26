@@ -79,6 +79,31 @@
         "${pkgs.wl-gammactl}/bin/wl-gammactl -c 1.025 -b 1.050 -g 1.000"
         "waybar"
       ];
+
+      bindm = [
+        # Move/resize windows with mainMod + LMB/RMB and dragging
+        "$mainMod, mouse:272, movewindow"
+        "$mainMod, mouse:273, resizewindow"
+      ];
+      decoration = {
+        # See https://wiki.hyprland.org/Configuring/Variables/ for more
+
+        rounding = 5;
+
+        drop_shadow = true;
+        shadow_range = 30;
+        shadow_render_power = 3;
+        "col.shadow" = "rgba(1a1a1aee)";
+      };
+      general = {
+        gaps_in = 5;
+        gaps_out = 10;
+        border_size = 2;
+        "col.active_border" = "rgba(#252fbaff) rgba(#252fbaff) 60deg";
+        "col.inactive_border" = "rgba($#303140f)";
+
+        layout = "master";
+      };
     };
   };
 }
