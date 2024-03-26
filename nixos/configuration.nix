@@ -99,7 +99,6 @@ hardware = {
 programs.noisetorch.enable = true;
 programs.zsh.enable = true;
 programs.hyprland.enable = true;
-programs.hyprland.nvidiaPatches = true;
   users.users.berkano = {
     isNormalUser = true;
     description = "berkano";
