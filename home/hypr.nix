@@ -74,6 +74,11 @@
 
         sensitivity = 0.0; # -1.0 - 1.0, 0 means no modification.
       };
+
+      exec-once = [
+        "${pkgs.wl-gammactl}/bin/wl-gammactl -c 1.025 -b 1.050 -g 1.000"
+        "waybar"
+      ];
     };
   };
 }
