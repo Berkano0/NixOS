@@ -100,7 +100,7 @@
         gaps_out = 10;
         border_size = 2;
         "col.active_border" = "rgba(#252fbaff) rgba(#252fbaff) 60deg";
-        "col.inactive_border" = "rgba($#303140f)";
+        "col.inactive_border" = "rgba(#303140ff)";
 
         layout = "master";
       };
