@@ -30,6 +30,7 @@
           "$mainMod SHIFT, right, movewindow, r"
           "$mainMod SHIFT, up, movewindow, u"
           "$mainMod SHIFT, down, movewindow, d"
+          ''"KP_Subtract, exec, amixer sset Capture toggle && amixer get Capture | grep "[off]" && (notify-send "MIC switched OFF")  || (notify-send "MIC switched ON")"''
 
           # "$mainMod, h, movefocus, l"
           #         	"$mainMod, l, movefocus, r"
