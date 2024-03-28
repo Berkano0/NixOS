@@ -4,7 +4,7 @@
   lib,
   ...
 }: {
-  imports = [./lf.nix ./rofi ./sxhkd.nix ./hypr.nix];
+  imports = [./lf.nix ./rofi ./sxhkd.nix ./hypr.nix ./zsh.nix];
   services.mako.enable = true;
   home = {
     username = "berkano";

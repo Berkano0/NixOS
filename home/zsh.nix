@@ -2,7 +2,7 @@
   programs.zsh = {
     enable = true;
   };
-  programs.zsh.envExtra = ''
+  programs.zsh.initExtra = ''
           autoload -U colors && colors
           PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
           #alias update="sudo nixos-rebuild switch --flake ~/Config#nixos"
