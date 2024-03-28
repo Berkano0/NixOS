@@ -5,6 +5,7 @@
   ...
 }: {
   imports = [./lf.nix ./rofi ./sxhkd.nix ./hypr.nix];
+  services.mako.enable = true;
   home = {
     username = "berkano";
     homeDirectory = lib.mkDefault "/home/berkano";
