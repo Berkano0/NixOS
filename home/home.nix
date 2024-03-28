@@ -11,6 +11,7 @@
     ./hypr.nix
     ./zsh.nix
 	./kitty.nix
+	./gtk.nix
     inputs.nix-colors.homeManagerModules.default
   ];
 

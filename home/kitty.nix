@@ -15,7 +15,7 @@
     # };
     shellIntegration.enableZshIntegration = true;
     settings = with config.colorScheme.colors; {
-      enable_audio_bell = "yes";
+      enable_audio_bell = "no";
 
       cursor = "#${base06}";
       cursor_text_color = "background";
