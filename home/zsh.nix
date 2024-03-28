@@ -38,6 +38,7 @@
              fi
          }
          alias lf="lfcd"
+		 alias ndz="nix develop --impure -c zsh"
 
   '';
 }
