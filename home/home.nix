@@ -4,7 +4,18 @@
   lib,
   ...
 }: {
-  imports = [./lf.nix ./rofi ./sxhkd.nix ./hypr.nix ./zsh.nix];
+  imports = [
+    ./lf.nix
+    ./rofi
+    ./sxhkd.nix
+    ./hypr.nix
+    ./zsh.nix
+	./kitty.nix
+    inputs.nix-colors.homeManagerModules.default
+  ];
+
+  colorScheme = inputs.nix-colors.colorSchemes.kanagawa;
+
   services.mako.enable = true;
   home = {
     username = "berkano";
