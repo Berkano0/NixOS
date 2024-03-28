@@ -6,7 +6,7 @@
   programs.kitty = {
     enable = true;
     font.name = "JetBrainsMono Nerd Font Mono";
-    font.size = 8;
+    font.size = 12;
     # keybindings = {
     #   "kitty_mod+h" = "neighboring_window left";
     #   "kitty_mod+l" = "neighboring_window right";
@@ -15,7 +15,7 @@
     # };
     shellIntegration.enableZshIntegration = true;
     settings = with config.colorScheme.colors; {
-      enable_audio_bell = "no";
+      enable_audio_bell = "yes";
 
       cursor = "#${base06}";
       cursor_text_color = "background";
