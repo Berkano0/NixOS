@@ -12,6 +12,7 @@
     ./zsh.nix
 	./kitty.nix
 	./gtk.nix
+	./mako.nix
     inputs.nix-colors.homeManagerModules.default
   ];
 
