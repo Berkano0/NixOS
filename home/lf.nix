@@ -55,7 +55,7 @@
       gv = "cd ~/Videos";
       go = "cd ~/Documents";
       gc = "cd ~/.config";
-      gC = "cd ~/Config";
+      gn = "cd ~/.config/NixOS";
       gp = "cd ~/Projects";
       gS = "cd ~/.local/share";
       gm = "cd /run/media";
