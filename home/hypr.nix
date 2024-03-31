@@ -2,7 +2,24 @@
   pkgs,
   lib,
   ...
-}: {
+}: let
+  startScript = pkgs.writeShellScriptBin "start" ''
+     ${pkgs.swww}/bin/swww init &
+
+     ${pkgs.networkmanagerapplet}/bin/nm-applet --indicator &
+
+     hyprctl setcursor Bibata-Modern-Ice 16 &
+
+     # wait a tiny bit for wallpaper
+     sleep 2
+
+
+    ${pkgs.telegram-desktop}/bin/telegram-desktop &
+    ${pkgs.vesktop}/bin/vesktop &
+    ${pkgs.firefox}/bin/firefox &
+
+  '';
+in {
   wayland.windowManager.hyprland = {
     enable = true;
     settings = {
@@ -30,7 +47,7 @@
           "$mainMod SHIFT, right, movewindow, r"
           "$mainMod SHIFT, up, movewindow, u"
           "$mainMod SHIFT, down, movewindow, d"
-          '' , KP_Subtract, exec, amixer sset Capture toggle && amixer get Capture | grep "\[off\]" && (notify-send "MIC switched OFF")  || (notify-send "MIC switched ON")''
+          '', KP_Subtract, exec, amixer sset Capture toggle && amixer get Capture | grep "\[off\]" && (notify-send "MIC switched OFF")  || (notify-send "MIC switched ON")''
 
           # "$mainMod, h, movefocus, l"
           #         	"$mainMod, l, movefocus, r"
@@ -79,6 +96,7 @@
       exec-once = [
         "${pkgs.wl-gammactl}/bin/wl-gammactl -c 1.025 -b 1.050 -g 1.000"
         "waybar"
+		"${pkgs.bash}/bin/bash ${startScript}/bin/start"
       ];
 
       bindm = [

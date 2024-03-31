@@ -13,6 +13,7 @@
 	./kitty.nix
 	./gtk.nix
 	./mako.nix
+	./waybar.nix
     inputs.nix-colors.homeManagerModules.default
   ];
 
