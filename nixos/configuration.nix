@@ -1,22 +1,22 @@
-{ config, pkgs, system, inputs, ... }:
-let 
-
-	mypkgs = import ./pkgs.nix {inherit pkgs;};
-
-in
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      inputs.home-manager.nixosModules.home-manager
-
-    ];
+  config,
+  pkgs,
+  system,
+  inputs,
+  ...
+}: let
+  mypkgs = import ./pkgs.nix {inherit pkgs;};
+in {
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+    inputs.home-manager.nixosModules.home-manager
+  ];
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "nixos"; # Define your hostname.
-
 
   networking.networkmanager.enable = true;
 
@@ -36,14 +36,16 @@ in
     LC_TIME = "uk_UA.UTF-8";
   };
 
-	home-manager = {
-      	extraSpecialArgs = {
-        	inherit inputs;
-      	};
-      	users = {
-        	"berkano" = import ./../home/home.nix;
-      	};
-    	};
+  home-manager = {
+    extraSpecialArgs = {
+      inherit inputs;
+    };
+    users = {
+      "berkano" = import ./../home/home.nix;
+    };
+  };
+
+  services.postgresql.enable = true;
 
   services.xserver.enable = true;
 
@@ -53,24 +55,22 @@ in
   services.ratbagd.enable = true;
 
   services.xserver = {
-  	videoDrivers = ["nvidia"];
+    videoDrivers = ["nvidia"];
 
-windowManager.awesome = {
+    windowManager.awesome = {
       enable = true;
       luaModules = with pkgs.luaPackages; [
         luarocks # is the package manager for Lua modules
         # luadbi-mysql # Database abstraction layer
       ];
-
     };
     layout = "us,ru";
     xkbVariant = "";
     xkbOptions = "grp:win_space_toggle";
   };
 
-
-  	services.printing.enable = false;
-	services.flatpak.enable = true;
+  services.printing.enable = false;
+  services.flatpak.enable = true;
   sound.enable = true;
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
@@ -79,50 +79,46 @@ windowManager.awesome = {
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
-
   };
 
+  hardware = {
+    nvidia = {
+      package = config.boot.kernelPackages.nvidiaPackages.stable;
+      modesetting.enable = true;
+    };
+    opengl = {
+      enable = true;
+      driSupport = true;
+      driSupport32Bit = true;
+    };
+  };
 
-hardware = { 
-	nvidia = {
-		package = config.boot.kernelPackages.nvidiaPackages.stable;
-		modesetting.enable = true;
-	};	
-	opengl = {
-		enable = true;
-		driSupport = true;
-		driSupport32Bit = true;
-    		};
-};
-
-
-programs.noisetorch.enable = true;
-programs.zsh.enable = true;
-programs.hyprland.enable = true;
+  programs.noisetorch.enable = true;
+  programs.zsh.enable = true;
+  programs.hyprland.enable = true;
   users.users.berkano = {
     isNormalUser = true;
     description = "berkano";
     shell = pkgs.zsh;
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = ["networkmanager" "wheel"];
     packages = mypkgs;
   };
 
   nixpkgs.config.allowUnfree = true;
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = ["nix-command" "flakes"];
 
   environment.systemPackages = with pkgs; [
     neovim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   ];
 
-environment.sessionVariables = {
-	WLR_NO_HARDWARE_CURSORS="1";
-	NIXOS_OZONE_WL="1";
-};
+  environment.sessionVariables = {
+    WLR_NO_HARDWARE_CURSORS = "1";
+    NIXOS_OZONE_WL = "1";
+  };
 
-  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+  xdg.portal.extraPortals = [pkgs.xdg-desktop-portal-gtk];
   xdg.portal.enable = true;
   xdg.portal.wlr.enable = true;
 
   system.stateVersion = "23.05"; # Did you read the comment?
-
 }
