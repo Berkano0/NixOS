@@ -27,6 +27,7 @@ with pkgs; [
   libnotify
   du-dust
   lazygit
+  (pkgs.nerdfonts.override {fonts = ["JetBrainsMono" "Iosevka" "FiraCode"];})
   ffmpeg
   wget
   file
