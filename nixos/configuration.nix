@@ -13,6 +13,10 @@ in {
     inputs.home-manager.nixosModules.home-manager
   ];
 
+  fonts.packages = with pkgs; [
+    (pkgs.nerdfonts.override {fonts = ["JetBrainsMono" "Iosevka" "FiraCode"];})
+  ];
+
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
