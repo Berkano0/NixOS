@@ -6,6 +6,7 @@ with pkgs; [
   tdesktop
   neofetch
   easyeffects
+  zathura
   xclip
   steam
   git
