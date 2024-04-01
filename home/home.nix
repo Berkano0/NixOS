@@ -14,6 +14,7 @@
 	./gtk.nix
 	./mako.nix
 	./waybar.nix
+	./zathura.nix
     inputs.nix-colors.homeManagerModules.default
   ];
 
