@@ -3,7 +3,7 @@
     enable = true;
     options = with config.colorScheme.colors; {
       default-bg = "#${base00}";
-      default-fg = "#${base04}";
+      default-fg = "#${base07}";
 
       statusbar-fg = "#${base02}";
       statusbar-bg = "#${base01}";
