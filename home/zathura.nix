@@ -9,10 +9,10 @@
       statusbar-bg = "#${base01}";
 
       inputbar-bg = "#${base00}";
-      inputbar-fg = "#${base04}";
+      inputbar-fg = "#${base06}";
 
       notification-bg = "#${base00}";
-      notification-fg = "#${base04}";
+      notification-fg = "#${base06}";
 
       notification-error-bg = "#${base00}";
       notification-error-fg = "#${base08}";
@@ -26,11 +26,11 @@
       completion-bg = "#${base03}";
       completion-fg = "#${base0D}";
 
-      completion-highlight-fg = "#${base04}";
+      completion-highlight-fg = "#${base06}";
       completion-highlight-bg = "#${base0D}";
 
       recolor-lightcolor = "#${base00}";
-      recolor-darkcolor = "#${base04}";
+      recolor-darkcolor = "#${base06}";
 
       recolor = "false";
       recolor-keephue = "false";
