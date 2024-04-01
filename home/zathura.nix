@@ -36,4 +36,6 @@
       recolor-keephue = "false";
     };
   };
+
+  home.file.".config/zathura/penis".text = "xui";
 }
