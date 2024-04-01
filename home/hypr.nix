@@ -48,7 +48,7 @@ in {
           "$mainMod SHIFT, up, movewindow, u"
           "$mainMod SHIFT, down, movewindow, d"
           '', KP_Subtract, exec, amixer sset Capture toggle && amixer get Capture | grep "\[off\]" && (notify-send "MIC switched OFF")  || (notify-send "MIC switched ON")''
-
+		  " , Print, exec, ${pkgs.grim}/bin/grim -l 0 - | ${pkgs.wl-clipboard}/bin/wl-copy"
           # "$mainMod, h, movefocus, l"
           #         	"$mainMod, l, movefocus, r"
           #         	"$mainMod, k, movefocus, u"
