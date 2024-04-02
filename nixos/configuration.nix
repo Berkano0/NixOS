@@ -50,8 +50,11 @@ in {
   };
 
   services.postgresql = {
-	enable = true;
-	extraPlugins = [pkgs.postgresql16Packages.postgis];
+    enable = true;
+    extraPlugins = [
+      pkgs.postgresql16Packages.postgis
+      pkgs.postgresql16Packages.development	
+	];
   };
 
   services.xserver.enable = true;
