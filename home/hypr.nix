@@ -48,9 +48,9 @@ in {
           "$mainMod SHIFT, up, movewindow, u"
           "$mainMod SHIFT, down, movewindow, d"
           '', KP_Subtract, exec, amixer sset Capture toggle && amixer get Capture | grep "\[off\]" && (notify-send "MIC switched OFF")  || (notify-send "MIC switched ON")''
-		  '' , Print, exec, ${pkgs.grim}/bin/grim -g "$(${pkgs.slurp}/bin/slurp)" - | ${pkgs.imagemagick}/bin/convert - -shave 1x1 PNG:- | ${pkgs.wl-clipboard}/bin/wl-copy''
+		  '', Print, exec, ${pkgs.grim}/bin/grim -g "$(${pkgs.slurp}/bin/slurp)" - | ${pkgs.imagemagick}/bin/convert - -shave 1x1 PNG:- | ${pkgs.wl-clipboard}/bin/wl-copy''
 		  ''$mainMod, E, exec, ${pkgs.wl-clipboard}/bin/wl-paste | ${pkgs.swappy}/bin/swappy -f -''
-		  ''Alt_L, kb_layout = "ua"''
+		  '', Alt_L, kb_layout = "ua"''
           # "$mainMod, h, movefocus, l"
           #         	"$mainMod, l, movefocus, r"
           #         	"$mainMod, k, movefocus, u"
