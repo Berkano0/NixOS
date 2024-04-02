@@ -49,7 +49,10 @@ in {
     };
   };
 
-  services.postgresql.enable = true;
+  services.postgresql = {
+	enable = true;
+	extraPlugins = pkgs.postgis;
+  };
 
   services.xserver.enable = true;
 
