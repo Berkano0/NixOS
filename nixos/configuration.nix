@@ -53,7 +53,6 @@ in {
     enable = true;
     extraPlugins = [
       pkgs.postgresql16Packages.postgis
-      pkgs.postgresql16Packages.development	
 	];
   };
 
