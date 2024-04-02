@@ -6,7 +6,7 @@ with pkgs; [
   tdesktop
   neofetch
   easyeffects
-  zoom
+  zoom-us
   zathura
   xclip
   steam
