@@ -53,8 +53,10 @@ in {
     enable = true;
     extraPlugins = [
       pkgs.postgresql16Packages.postgis
-	];
+    ];
   };
+
+  virtualisation.docker.enable = true;
 
   services.xserver.enable = true;
 
