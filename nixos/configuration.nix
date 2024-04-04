@@ -57,7 +57,7 @@ in {
   };
 
   virtualisation.docker.enable = true;
-  virtualisation.systemPackages = pkgs.docker-compose;
+  environment.systemPackages = pkgs.docker-compose;
 
   services.xserver.enable = true;
 
