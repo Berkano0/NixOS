@@ -32,6 +32,7 @@ with pkgs; [
   (pkgs.nerdfonts.override {fonts = ["JetBrainsMono" "Iosevka" "FiraCode"];})
   ffmpeg
   wget
+  distrobox
   file
   rofi-wayland
   obsidian
