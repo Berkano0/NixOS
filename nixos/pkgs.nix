@@ -25,6 +25,7 @@ with pkgs; [
   zoxide
   onlyoffice-bin
   ripgrep
+  pavucontrol
   vesktop
   libnotify
   du-dust
