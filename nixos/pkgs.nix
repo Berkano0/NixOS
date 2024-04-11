@@ -3,6 +3,7 @@ with pkgs; [
   firefox
   kate
   discord
+  distrobox
   tdesktop
   neofetch
   easyeffects
