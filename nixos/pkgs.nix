@@ -3,6 +3,7 @@ with pkgs; [
   firefox
   kate
   unzip
+  android-studio
   discord
   distrobox
   tdesktop
