@@ -13,6 +13,7 @@ with pkgs; [
   steam
   git
   alacritty
+  jetbrains.idea-community
   piper
   ranger
   rofi
