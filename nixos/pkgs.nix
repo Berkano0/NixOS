@@ -2,6 +2,7 @@
 with pkgs; [
   firefox
   kate
+  unzip
   discord
   distrobox
   tdesktop
