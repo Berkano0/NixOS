@@ -17,6 +17,7 @@ with pkgs; [
   alacritty
   jetbrains.idea-community
   piper
+  heroic
   ranger
   rofi
   fzf
