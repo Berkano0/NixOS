@@ -2,6 +2,7 @@
 with pkgs; [
   firefox
   kate
+  gimp
   unzip
   android-studio
   discord

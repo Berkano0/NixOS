@@ -1,4 +1,4 @@
-KP_Subtract
+0xFF55
 	amixer sset Capture toggle
 Menu
 	rofi -show drun 
