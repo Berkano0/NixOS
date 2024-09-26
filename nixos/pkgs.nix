@@ -1,6 +1,7 @@
 {pkgs, ...}:
 with pkgs; [
   firefox
+  mpv
   kate
   gimp
   unzip
