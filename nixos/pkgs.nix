@@ -1,5 +1,6 @@
 {pkgs, ...}:
 with pkgs; [
+  python
   firefox
   unrar
   mpv
