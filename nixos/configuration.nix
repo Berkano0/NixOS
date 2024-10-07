@@ -103,7 +103,6 @@ in {
 
   services.printing.enable = false;
   services.flatpak.enable = true;
-  sound.enable = true;
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
@@ -120,8 +119,6 @@ in {
     };
     opengl = {
       enable = true;
-      driSupport = true;
-      driSupport32Bit = true;
     };
   };
 
