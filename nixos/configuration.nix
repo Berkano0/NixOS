@@ -147,9 +147,8 @@ in {
     NIXOS_OZONE_WL = "1";
   };
 
-  xdg.portal.extraPortals = [pkgs.xdg-desktop-portal-gtk];
+  xdg.portal.extraPortals = [pkgs.xdg-desktop-portal-hyprland];
   xdg.portal.enable = true;
-  xdg.portal.wlr.enable = true;
 
   system.stateVersion = "23.05"; # Did you read the comment?
 }
