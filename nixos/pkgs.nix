@@ -1,5 +1,6 @@
 {pkgs, ...}:
 with pkgs; [
+  blender
   firefox
   unrar
   mpv
